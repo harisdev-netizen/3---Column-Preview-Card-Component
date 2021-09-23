@@ -1,0 +1,250 @@
+/*----------
+    MAIN
+----------*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #f2f2f2;
+    color: #FFF;
+    display: flex;
+    min-height: 100vh;
+} 
+
+html{
+    font-size: 62.5%;
+}
+
+.container{
+    width: 1000px;
+    margin: auto;
+    display: flex;
+    max-width: 97%;
+}
+
+.sedan, .suv, .luxury{
+    background-color: #E28625;
+    color: white;
+}
+
+.card {
+    padding: 48px;
+    flex: 1 1 33.3%;
+}
+
+/*----------
+    ICON
+-----------*/
+img{
+    width: 60px;
+    margin-bottom: 35px;
+}
+
+/*----------------
+    TEXT CONTENT
+------------------*/
+
+.text-content h1{
+    font-size: 40px;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    font-family: 'Big Shoulders Display', sans-serif;
+}
+
+.text-content p{
+    margin-bottom: 83px;
+    color: #FFFFFF;
+    font-size: 15px;
+    font-family: 'Lexend Deca', sans-serif;
+    opacity: 0.75;
+    line-height: 25px;
+}
+
+/*------------------ 
+    SEDAN CONTENT
+-------------------*/
+
+.sedan {
+    border-radius: 10px 0 0 10px;
+}
+
+.sedan button {
+    color: #E28625;
+}
+
+
+/*----------------
+    SUV CONTENT
+------------------*/
+
+.suv {
+    background-color: #006971;
+}
+
+.suv button{
+    color:#006971;
+}
+
+/*------------------
+    LUXURY CONTENT
+--------------------*/
+
+.luxury{
+    background-color: #004140;
+    border-radius: 0 10px 10px 0;
+}
+
+.luxury button{
+    color: #004140;
+}
+
+/*-------------
+    BUTTONS
+--------------*/
+
+/* Buttons */
+a,
+.btn {
+  display: inline-block;
+  background-color: #f2f2f2;
+  text-decoration: none;
+  border-radius: 30px;
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 15px;
+  padding: 10px 40px;
+  border: 1px solid rgba(255, 255, 255, 0);
+}
+
+.btn-orange {
+  color: rgba(226, 134, 37, 1);
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-blue {
+  color: rgba(0, 105, 113, 1);
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-green {
+  color: rgba(0, 65, 64, 1);
+  transition: all 0.3s ease-in-out;
+}
+
+/*-----------
+    BUTTONS
+------------*/
+
+.btn-orange:hover {
+    color: #fff;
+    border: 1px solid #fff;
+    background-color: #a40606;
+    background-image: linear-gradient(315deg, #a40606 0%, #d98324 74%);
+}
+
+.btn-blue:hover {
+    color: #fff;
+    border: 1px solid #fff;
+    background-color: #7f5a83;
+    background-image: linear-gradient(315deg, #7f5a83 0%, #0d324d 74%);   
+}
+
+.btn-green:hover {
+    color: #fff;
+    border: 1px solid #fff;
+    background-color: #63d471;
+    background-image: linear-gradient(315deg, #63d471 0%, #233329 74%);
+}
+
+/*-----------------
+    CARD HOVER
+-------------------*/
+
+/*--------------------
+    BLUR TRANSITION
+---------------------*/
+.card:hover{
+    transition: 0.6s ease-in-out;
+    box-shadow: 2px 30px 30px rgba(0,0,0,0.5);
+}
+
+.container:hover > .card:not(:hover) , .card-content:not(:hover) {
+    filter: brightness(0.8) saturate(1) contrast(1.2) blur(3px);
+}
+
+/*----------------------------------------
+    CARDS HOVER (RGBA COLORS) TRANSITION
+-----------------------------------------*/
+.sedan:hover {
+    cursor: pointer;
+    background-color: #A40606;
+    background-image: linear-gradient(315deg, #A40606 0%, #D98324 74%);
+    transform: perspective(500px) translateZ(15px);
+}
+
+.suv:hover {
+    cursor: pointer;
+    background-color: #7F5A83;
+    background-image: linear-gradient(315deg, #7F5A83 0%, #0D324D 74%); 
+    transform: perspective(500px) translateZ(15px);
+}
+
+.luxury:hover {
+    cursor: pointer;
+    background-color: #63D471;
+    background-image: linear-gradient(315deg, #63D471 0%, #233329 74%);
+    transform: perspective(500px) translateZ(15px);
+}
+
+/*------------------
+    MEDIA QUERIES
+--------------------*/
+@media (max-width: 768px) {
+    html { font-size: 55%; }
+
+    body {
+        padding: 20px;
+    }
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        max-width: 55%;
+        margin: auto;
+    }
+    
+    .btn button {
+        font-size: 15px;
+        line-height: 25px;
+        border-radius: 25px;
+    }
+
+    p {
+        font-size: 15px;
+        font-weight: 400;
+    }
+    .sedan {
+        border-radius: 10px 10px 0 0;
+    }
+    .luxury {
+        border-radius: 0 0 10px 10px;
+    }
+}
+/* @media (max-width: 600px) {
+    html { font-size: 55%; }
+   .heading {
+       font-size: 36px;
+   }
+   .para {
+       font-size: 15px;
+   }
+   a {
+       font-size: 14px;
+   }
+} */
